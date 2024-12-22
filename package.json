@@ -1,0 +1,22 @@
+{
+  "name": "importtodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv": "^6.3.11",
+    "moment-jalaali": "^0.10.4",
+    "mysql2": "^3.11.4",
+    "prompt-sync": "^4.2.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^22.9.3"
+  }
+}
