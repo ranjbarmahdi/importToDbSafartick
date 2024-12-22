@@ -51,7 +51,8 @@ async function main() {
         3 - Insert Comment`;
 
     console.log(menuString);
-    const userInput = prompt('Enter your choice (1-3): ')?.trim();
+    // const userInput = prompt('Enter your choice (1-3): ')?.trim();
+    const userInput = '1';
 
     switch (userInput) {
         case MENU_OPTIONS.INSERT_RESIDENCE:
