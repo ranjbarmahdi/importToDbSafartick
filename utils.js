@@ -102,3 +102,23 @@ export function getDomain(url) {
 export const jalaliToGregorianDate = (jalaliDate) => {
     return moment(jalaliDate, 'jYYYY/jMM/jDD').format('YYYY-MM-DD');
 };
+
+//============================================ convert To English Number
+export function convertToEnglishNumber(inputNumber) {
+    const persianNumbers = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+
+    // Check if the input contains Persian numbers
+    const containsPersianNumber = new RegExp(`[${persianNumbers.join('')}]`).test(inputNumber);
+
+    if (containsPersianNumber) {
+        // Convert Persian numbers to English numbers
+        for (let i = 0; i < 10; i++) {
+            const persianDigit = new RegExp(persianNumbers[i], 'g');
+            inputNumber = inputNumber.replace(persianDigit, i.toString());
+        }
+        return inputNumber;
+    } else {
+        // Input is already an English number, return as is
+        return inputNumber;
+    }
+}

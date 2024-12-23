@@ -1,5 +1,5 @@
 import { insertResidence, insertCity } from './db.js';
-import { csvRowGenerator, delay } from './utils.js';
+import { csvRowGenerator, delay, convertToEnglishNumber } from './utils.js';
 
 export default async function residence(filePath) {
     try {
@@ -21,8 +21,8 @@ export default async function residence(filePath) {
                 ?.split('\n')
                 ?.find((value) => value.includes('امتیاز کلی'))
                 ?.split(':')[1];
-
-            rating = rating ? Number(rating) : null;
+            rating = convertToEnglishNumber(rating);
+            rating = rating = rating ? Number(rating) : null;
 
             const residenceData = [
                 row.sku,
