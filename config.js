@@ -15,7 +15,7 @@ class Database {
         if (!this.connection) {
             try {
                 this.connection = await mysql.createConnection({
-                    host: '91.107.177.255',
+                    host: '185.211.56.187',
                     user: 'root',
                     password: 'safartick@hd6730mrm',
                     database: 'safartick',
